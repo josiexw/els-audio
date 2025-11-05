@@ -35,7 +35,6 @@ def preprocess_db(db_path, target_db_path):
                 f.create_dataset('Wx', data=Wx, compression='gzip')
                 f.create_dataset('scales', data=scales)
                 f.create_dataset('sample_rate', data=sample_rate)
-            return
 
 def main():
     parser = argparse.ArgumentParser(description='Compute CWT for all files in a specified directory.')

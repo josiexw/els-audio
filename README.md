@@ -27,7 +27,7 @@ images. In this case, we implement the ELS machine for audio, comparing its pred
 │   └── diff
 │
 ├── data/
-│   └── FSD50K
+│   └── ESC-50
 │
 ├── src/
 │   ├── dataloader/
@@ -35,8 +35,7 @@ images. In this case, we implement the ELS machine for audio, comparing its pred
 │   ├── eval/
 │   │   └── eval.py
 │   └── models/
-│       ├── sample_ddim.py
-│       └── train_ddlm.py
+│       └── ddpm.py
 │
 ├── .gitignore
 ├── requirements.txt
@@ -46,7 +45,7 @@ images. In this case, we implement the ELS machine for audio, comparing its pred
 ---
 
 ## Downloading dataset
-- [FSD50K](https://zenodo.org/records/4060432)
+- [ESC-50](https://github.com/karolpiczak/ESC-50)
 
 ## Installation
 ```bash
