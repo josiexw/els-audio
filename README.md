@@ -24,16 +24,19 @@ images. In this case, we implement the ELS machine for audio, comparing its pred
 ├── assets/
 │
 ├── checkpoints/
-│   └── diff
+│   └── ddpm/
 │
 ├── data/
-│   └── ESC-50
+│   └── esc50/
+│       ├── test/
+│       └── train/
 │
 ├── src/
-│   ├── dataloader/
-│   │   └── fsd50k_loader.py
-│   ├── eval/
-│   │   └── eval.py
+│   ├── data_preprocessing/
+│   │   ├── complex_morlet_transformation.py
+│   │   ├── data_split.py
+│   │   └── generate_patch_bank.py
+│   │
 │   └── models/
 │       └── ddpm.py
 │
