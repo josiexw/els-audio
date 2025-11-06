@@ -297,7 +297,11 @@ def train():
     opt = torch.optim.Adam(model.parameters(), lr=LR, betas=(0.9,0.999), weight_decay=WEIGHT_DECAY)
     gamma = 0.5 ** (1.0 / LR_HALF_EVERY_EPOCHS)
     sched = torch.optim.lr_scheduler.ExponentialLR(opt, gamma=gamma)
-    scaler = torch.amp.GradScaler(enabled=(USE_AMP and DEVICE=="cuda"))
+    try:
+        from torch.cuda.amp import GradScaler
+    except Exception:
+        from torch.amp import GradScaler
+    scaler = GradScaler(enabled=(USE_AMP and DEVICE == "cuda"))
     global_step = 0
     for epoch in range(1, EPOCHS+1):
         model.train()
