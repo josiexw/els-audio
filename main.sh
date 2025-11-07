@@ -11,10 +11,10 @@
 # # Load your shell environment to activate your Conda environment
 # source /home/user/.bashrc
 # conda activate myconda
-VENV_PATH="/path/to/your/venv" 
+VENV_PATH="/orcd/home/002/josiexw/ondemand/data/sys/myjobs/projects/els-audio/venv" 
 
 # Check if the virtual environment exists
-if [ -d "venv" ]; then
+if [ -d "$VENV_PATH" ]; then
     echo "Activating virtual environment at $VENV_PATH..."
     source "$VENV_PATH/bin/activate"
 else
@@ -26,4 +26,4 @@ fi
 module load cuda/12.0
 
 # Run your command or script
-python src/models/ddpm.py
+python my_analysis.py
